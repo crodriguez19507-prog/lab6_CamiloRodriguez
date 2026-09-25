@@ -1,1 +1,87 @@
-/* TODO: escribe aquí tus reglas CSS (Lab #6) */
+/* TODO: escr/* 1. Selector Universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Selector de Elemento */
+body {
+    font-family: Arial, sans-serif; /* Familia: tipografía */
+    background-color: #f4f4f4; /* Familia: color/fondo */
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* 3. Selector de Agrupación */
+h1, h2, h3 {
+    margin-bottom: 15px; /* Familia: caja */
+    text-align: center; /* Familia: disposición */
+}
+
+/* 4. Selector de Elemento */
+section {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%; /* Unidad % */
+    max-width: 1000px; /* Unidad px */
+    border: 2px solid #808080; /* Familia: bordes (Tu color Gris) */
+    border-radius: 8px;
+}
+
+/* 5. Selector de ID (K) */
+#ficha-8-860-356 {
+    display: block; /* Familia: disposición */
+}
+
+/* 6. Selector de Clase (K) */
+.k-xxxxxx {
+    padding: 10px;
+}
+
+/* 7. Selector de Elemento */
+table {
+    width: 100%; /* Familia: dimensiones */
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+/* 8. Selector de Agrupación */
+th, td {
+    border: 1px solid #808080; /* Gris */
+    padding: 10px;
+    text-align: left;
+}
+
+/* 9. Selector de Elemento */
+nav ul {
+    list-style: none;
+    display: flex; /* Disposición Flex */
+    justify-content: center;
+    gap: 20px;
+}
+
+/* 10. Selector de Elemento */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 11. Selector de Clase Obligatoria */
+.lab6-ia-8842 {
+    min-height: 100vh; /* Unidad vh */
+}
+
+/* 12. Selector de Elemento */
+footer {
+    background-color: #808080; /* Tu color Gris (K) */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Comentarios solicitados (3/3) */
+/* Fin del documento de estilos */ibe aquí tus reglas CSS (Lab #6) */
