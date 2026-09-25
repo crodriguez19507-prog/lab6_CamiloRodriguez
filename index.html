@@ -1,2 +1,235 @@
-<!-- TODO: construye aquí tu página (Lab #6) -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estación meteorológica</title>
+    <meta name="description" content="Estación meteorológica">
+    <meta name="author" content="Camilo Rodriguez">
+    <meta name="codigo-sesion" content="LAB6-V9S3">
+    
+    <!-- Integración 1: CSS Externo -->
+    <link rel="stylesheet" href="css/estilos.css">
+    
+    <!-- Integración 2: CSS Interno -->
+    <style>
+        .alerta-clima {
+            background-color: #ffcccc;
+            border: 2px solid red;
+            padding: 10px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+    </style>
+
+    <!-- Scripting -->
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    
+    <noscript>
+        <div style="background: red; color: white; padding: 10px; text-align: center;">
+        </div>
+    </noscript>
+
+    <header>
+        <!-- Integración 3: CSS en línea -->
+        <h1 style="text-align: center; text-transform: uppercase;">Estación meteorológica</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#datos">Datos Actuales</a></li>
+                <li><a href="#instrumentos">Instrumentos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="ficha-0356" class="k-f18536">
+        <!-- SECCIÓN 1: Inicio -->
+        <section id="inicio">
+            <h2>Bienvenido a la Estación de Meteorología</h2>
+            
+            <article>
+                <h3>Reporte del día</h3>
+                <div class="alerta-clima">
+                    <strong>Atención:</strong> Hoy se esperan <em>fuertes vientos</em> en la región. 
+                    Revise los avisos del <abbr title="Instituto Meteorológico Nacional">IMN</abbr>.
+                </div>
+                <p>
+                    Última actualización: <time datetime="2026-09-23T08:00">08:00 AM</time>.
+                </p>
+                <p>
+                    Como mencionó el climatólogo <cite>Dr. Pérez</cite>: <q>El clima es lo que esperas, el tiempo es lo que tienes</q>.
+                </p>
+                <p>
+                    Sugerimos llevar <mark>paraguas</mark> y empacar <small>ropa abrigada</small>. Para recargar la página, presione <kbd>F5</kbd>.
+                </p>
+            </article>
+
+            <article>
+                <h3>Mapa de Radares</h3>
+                <figure>
+                    <img src="img/foto.png" alt="Radar meteorológico mostrando un frente frío acercándose a la costa" loading="lazy">
+                    <figcaption>Figura 1: Radar Doppler actual y niveles de precipitación.</figcaption>
+                </figure>
+                
+                <details>
+                    <summary>¿Cómo leer el radar?</summary>
+                    <p>Las zonas en tonos cálidos (rojo/naranja) indican alta precipitación, mientras que los tonos fríos (azul) son precipitaciones leves o cielos despejados.</p>
+                </details>
+            </article>
+        </section>
+
+        <!-- SECCIÓN 2: Datos y Tabla -->
+        <section id="datos">
+            <h2>Registro de Temperaturas</h2>
+            <table>
+                <caption>Temperaturas registradas durante la semana en curso</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Día</th>
+                        <th scope="col">Temp. Máxima (°C)</th>
+                        <th scope="col">Temp. Mínima (°C)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Exactamente 6 filas en tbody, cada una con 3 celdas -->
+                    <tr>
+                        <td>Lunes</td>
+                        <td>28</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>Martes</td>
+                        <td>29</td>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <td>Miércoles</td>
+                        <td>25</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>Jueves</td>
+                        <td>24</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>Viernes</td>
+                        <td>27</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>Sábado</td>
+                        <td>30</td>
+                        <td>20</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row" colspan="2">Promedio Semanal (Aprox)</th>
+                        <td>17.5</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <h3>Glosario Básico</h3>
+            <dl>
+                <dt>Humedad Relativa</dt>
+                <dd>Proporción de vapor de agua en el aire respecto al máximo posible.</dd>
+                <dt>Presión Atmosférica</dt>
+                <dd>Peso de la columna de aire sobre un punto específico de la Tierra.</dd>
+            </dl>
+        </section>
+
+        <!-- SECCIÓN 3: Instrumentos y Multimedia -->
+        <section id="instrumentos">
+            <h2>Nuestros Instrumentos</h2>
+            <ul>
+                <li>Anemómetro (velocidad del viento)</li>
+                <li>Barómetro (presión atmosférica)</li>
+                <li>Pluviómetro (cantidad de lluvia)</li>
+            </ul>
+            
+            <h3>Monitoreo en vivo</h3>
+            <video controls width="100%">
+                <source src="https://samplelib.com/mp4/sample-5s.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+            <br><br>
+            <iframe src="https://maps.google.com/maps?q=Universidad%20Tecnol%C3%B3gica%20de%20Panam%C3%A1&t=&z=15&ie=UTF8&iwloc=&output=embed" title="Mapa global interactivo de vientos" width="100%" height="300" loading="lazy"></iframe>
+        </section>
+
+        <!-- ASIDE: Formularios -->
+        <aside id="contacto">
+            <h2>Solicitar Informe</h2>
+            <form action="procesar.php" method="post">
+                <fieldset>
+                    <legend>Datos de Solicitud</legend>
+                    
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez" maxlength="50" autocomplete="name">
+                    
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" required placeholder="usuario@correo.com">
+                    
+                    <label for="telefono">Teléfono (opcional):</label>
+                    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{8,15}" placeholder="Ej. 61234567">
+                    
+                    <label for="fecha">Fecha de inicio del reporte:</label>
+                    <input type="date" id="fecha" name="fecha" required min="2024-01-01" max="2027-12-31">
+                    
+                    <label for="dias">Días a proyectar (1-15):</label>
+                    <input type="number" id="dias" name="dias" min="1" max="15" value="7" step="1">
+                    
+                    <label for="color_tema">Color de la portada PDF:</label>
+                    <input type="color" id="color_tema" name="color_tema" value="#242097">
+                    
+                    <label for="ciudad">Ciudad de interés:</label>
+                    <input list="ciudades" id="ciudad" name="ciudad" required autocomplete="off" placeholder="Escribe o selecciona">
+                    <datalist id="ciudades">
+                        <option value="Panamá">
+                        <option value="Colón">
+                        <option value="David">
+                        <option value="Santiago">
+                    </datalist>
+                    
+                    <p class="radio-group-title">Nivel de detalle:</p>
+                    <div class="radio-group">
+                        <input type="radio" id="resumido" name="tipo_reporte" value="resumido" checked>
+                        <label for="resumido">Básico</label>
+                        
+                        <input type="radio" id="detallado" name="tipo_reporte" value="detallado">
+                        <label for="detallado">Avanzado</label>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="suscripcion" name="suscripcion" value="si" checked readonly>
+                        <label for="suscripcion">Suscripción al boletín (Obligatorio)</label>
+                    </div>
+                    
+                    <label for="uso">Motivo de solicitud:</label>
+                    <select id="uso" name="uso" required>
+                        <option value="">Seleccione...</option>
+                        <option value="academico">Académico</option>
+                        <option value="agricola">Agrícola</option>
+                        <option value="turismo">Turismo</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    
+                    <label for="comentarios">Comentarios:</label>
+                    <textarea id="comentarios" name="comentarios" rows="3" placeholder="Detalles adicionales..."></textarea>
+                    
+                    <button type="submit">Generar Reporte</button>
+                </fieldset>
+            </form>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Estación meteorológica © 2026. Desarrollado por Camilo Rodriguez.</p>
+    </footer>
+</body>
+</html><!-- TODO: construye aquí tu página (Lab #6) -->
  
